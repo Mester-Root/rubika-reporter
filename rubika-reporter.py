@@ -6,16 +6,15 @@ try:
     from requests import post,get
 except ModuleNotFoundError or ImportError:
     system('pip3 install requests')
-	from requests import post,get
+    from requests import post,get
+
 from random import randint, choice
 from json import loads, dumps, JSONDecodeError
 import base64,urllib3
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from time import sleep, time
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 class clients:
 	web = {
 		"app_name"    : "Main",
