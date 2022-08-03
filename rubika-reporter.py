@@ -159,7 +159,7 @@ class run:
                 num += 1
         else:
             for code in mode:
-		date : str = time()
+                date : str = time()
                 sleep(1.5)
                 if method == '2':
                     auth : str = robot.auths()
