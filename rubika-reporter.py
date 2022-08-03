@@ -1,7 +1,14 @@
 #!/bin/python
+from os import system
+from platform import system as sm
+typeSystem : str = sm()
+try:
+    from requests import post,get
+except ModuleNotFoundError or ImportError:
+    system('pip3 install requests')
+	from requests import post,get
 from random import randint, choice
 from json import loads, dumps, JSONDecodeError
-from requests import post,get
 import base64,urllib3
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
@@ -112,6 +119,10 @@ class robot:
         },url=robot.url()).json()["data_enc"]))
 class run:
     def running():
+		if 'linux' in typeSystem.lower() or 'mac' in typeSystem.lower():
+			system('clear')
+		else:
+			system('cls')
         numb : int = input('\n\033[31m[?] \033[36mplease enter number report \033[31m_> \033[0m')
         number = int(numb)
         num : int = 0
@@ -149,6 +160,7 @@ class run:
                 num += 1
         else:
             for code in mode:
+		date : str = time()
                 sleep(1.5)
                 if method == '2':
                     auth : str = robot.auths()
