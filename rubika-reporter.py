@@ -171,11 +171,11 @@ class run:
                     pass
                 try:
                     bot.reportObject(user=guid, mode=code)
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
+                    print(f'\n\033[31m[+] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
                     with open('auths.txt', 'a') as true:
                         true.write(auth+'\n')
                 except:
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
+                    print(f'\n\033[31m[!] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
         else:
             while num < number:
                 sleep(1.5)
@@ -189,11 +189,11 @@ class run:
                     pass
                 try:
                     bot.reportObject(user=guid, mode=mode)
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
+                    print(f'\n\033[31m[+] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
                     with open('auths.txt', 'a') as true:
                         true.write(auth+'\n')
                 except:
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
+                    print(f'\n\033[31m[!] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
                 num += 1
 # ........... START ............
 if __name__ == '__main__':
