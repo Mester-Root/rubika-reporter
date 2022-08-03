@@ -119,10 +119,10 @@ class robot:
         },url=robot.url()).json()["data_enc"]))
 class run:
     def running():
-		if 'linux' in typeSystem.lower() or 'mac' in typeSystem.lower():
-			system('clear')
-		else:
-			system('cls')
+        if 'linux' in typeSystem.lower() or 'mac' in typeSystem.lower():
+            system('clear')
+        else:
+            system('cls')
         numb : int = input('\n\033[31m[?] \033[36mplease enter number report \033[31m_> \033[0m')
         number = int(numb)
         num : int = 0
