@@ -130,7 +130,7 @@ class run:
             auth : str = input('\n\033[31m[?] \033[36mplease enter your AUTH \033[31m_> \033[0m')
         guid : str = input('\n\033[31m[?] \033[36mplease enter guid target _> \033[0m')
         # MODE FOR REPORT !
-        the : str = input('\n\033[31m[?] \033[36mmode report \033[31m\'0\' \033[36mfor spam \033[31\'1\' \033[36mfor your file codes list \033[31m_> \033[20;37m')
+        the : str = input('\n\033[31m[?] \033[36mmode report \033[31m\'1\' \033[36mfor spam \033[31m\'0\' \033[36mfor your file codes list \033[31m_> \033[20;37m')
         if the == '0':
             mode : str = 'مستهجن'
         if the == '1':
@@ -151,11 +151,11 @@ class run:
                     pass
                 try:
                     bot.reportObject(user=guid, mode=mode)
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth}')
+                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m{spam} \033[31m/ \033[92m{date}')
                     with open('auths.txt', 'a') as true:
                         true.write(auth+'\n')
                 except:
-                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth}')
+                    print(f'\n\033[31m[1] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m{spam} \033[31m/ \033[92m{date}')
                 num += 1
         else:
             for code in mode:
