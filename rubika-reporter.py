@@ -95,7 +95,7 @@ class robot:
         return auths
     @staticmethod
     def url():
-        server = ['https://messengerg2c37.iranlms.ir/', 'https://messengerg2c64.iranlms.ir/', 'https://messengerg2c26.iranlms.ir' ,'https://messengerg2c46.iranlms.ir' ,'https://messengerg2c39.iranlms.ir']
+        server = ['https://messengerg2c56.iranlms.ir/', 'https://messengerg2c74.iranlms.ir/', 'https://messengerg2c37.iranlms.ir/', 'https://messengerg2c59.iranlms.ir/', 'https://messengerg2c26.iranlms.ir' ,'https://messengerg2c46.iranlms.ir' ,'https://messengerg2c39.iranlms.ir']
         host : str = (choice(server))
         return host
     def block(self, guid):
@@ -172,8 +172,11 @@ class run:
                 try:
                     bot.reportObject(user=guid, mode=code)
                     print(f'\n\033[31m[+] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
-                    with open('auths.txt', 'a') as true:
-                        true.write(auth+'\n')
+                    try:
+						with open('auths.txt', 'a') as true:
+                        	true.write(auth+'\n')
+					except:
+						pass
                 except:
                     print(f'\n\033[31m[!] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mcode: \033[92m{code} \033[31m/ \033[92m{date}')
         else:
@@ -190,8 +193,11 @@ class run:
                 try:
                     bot.reportObject(user=guid, mode=mode)
                     print(f'\n\033[31m[+] \033[36mauth \033[31m/ \033[92mTrue \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
-                    with open('auths.txt', 'a') as true:
-                        true.write(auth+'\n')
+                    try:
+						with open('auths.txt', 'a') as true:
+							true.write(auth+'\n')
+					except:
+						pass
                 except:
                     print(f'\n\033[31m[!] \033[36mauth \033[31m/ \033[35mFalse \033[31m/\033[36m {auth} \033[31m/ \033[93mreport: \033[92m[SPAM] \033[31m/ \033[92m{date}')
                 num += 1
